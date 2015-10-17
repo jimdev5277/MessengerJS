@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="../messenger.js"></script>
+</head>
+
+<body>
+  <h2>这是子页面3</h2>
+  <div id="cc"></div>
+  <script type="text/javascript">
+    var messenger = new Messenger('iframe3', 'projectName');
+    messenger.listen(function(msg) {
+      document.getElementById("cc").innerHTML = JSON.parse(msg).wz;
+    });
+  </script>
+</body>
+
+</html>
